@@ -20,11 +20,11 @@ public class Category {
     @JoinColumn(name = "category_id")
     private List<Cheese> cheeses = new ArrayList<>();
 
+    public Category() { }
+
     public Category(String name) {
         this.name = name;
     }
-
-    public Category() { }
 
     public int getId() {
         return id;
@@ -36,6 +36,10 @@ public class Category {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Cheese> getCheeses() {
+        return cheeses;
     }
 
 }
